@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DWR简单推送页面</title>
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../dwr/engine.js"></script>
+	<script type="text/javascript" src="../../dwr/util.js"></script>
+	<script type="text/javascript" src="../../dwr/interface/MessagePush.js"></script>
+</head>
+<body>
+	<p>dwr推送接收数据</p>
+	<div id="content" style="border:1px solid; width: 120px ; heigth: 50px; padding: 10px">
+		
+	</div>
+
+	<script type="text/javascript" >
+		//用来启动页面的ReverseAjax功能
+		dwr.engine.setActiveReverseAjax(true);
+		//设置页面关闭时，通知服务器销毁会话
+		dwr.engine.setNotifyServerOnPageUnload(true);
+		//这个函数是提供给后台推送的时候调用的
+		function show(content) {
+		//	$("#content").append(content);		jqury写法
+			document.querySelector('#content').innerHTML += content;
+		}
+	</script>
+</body>
+</html>

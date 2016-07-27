@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>测试DWR ajax功能</title>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="dwr/engine.js"></script>
+	<script type="text/javascript" src="dwr/util.js"></script>
+	<script type="text/javascript" src="dwr/interface/SimpleMessagePush.js"></script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td><input id="content" type="text"/></td>
+			<td><input id="send" type="button" value="submit"></td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript">
+		$("#send").click(function() {
+			var content = $("#content").val();
+			//调用后台方法
+			SimpleMessagePush.send(content);
+		});
+	</script>
+
+</body>
+</html>

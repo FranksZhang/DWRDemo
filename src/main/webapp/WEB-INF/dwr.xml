@@ -13,5 +13,10 @@
 			<param name="class" value="com.FranksZhang.SimpleReverseAjax.MessagePush" />
 		</create>
 	</allow>
+	<allow>
+		<create creator="new" javascript="ComplexMessagePush">
+			<param name="class" value="com.FranksZhang.ComplexReverseAjax.MessagePush" />
+		</create>
+	</allow>
 	
 </dwr>

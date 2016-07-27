@@ -27,6 +27,12 @@
 			<param-name>initApplicationScopeCreatorsAtStartup</param-name>
 			<param-value>true</param-value>
 		</init-param>
+		<!-- 自定义的scriptSession管理器 ,第三个包中的配置-->
+		<init-param>
+			<param-name>org.directwebremoting.extend.ScriptSessionManager </param-name>
+			<param-value>com.FranksZhang.ComplexReverseAjax.DWRScriptSessionManager </param-value>
+		</init-param>
+	
 	</servlet>
 
 	<servlet-mapping>
